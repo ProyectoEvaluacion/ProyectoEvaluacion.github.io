@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Alumno Nuevo</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+    <div class="container">
+        <form action="https://sheetdb.io/api/v1/6wjarqdjyw9j6" method="post" id="Form">
+            <label for="Matricula">Matricula:</label>
+            <input type="Number" id="Matricula" name="Matricula" required>
+
+            <label for="Estudiantes">Nombre Del Alumno:</label>
+            <input type="text" id="Estudiantes" name="Estudiantes" required>
+
+            <label for="Parcial1">Parcial 1:</label>
+            <input type="Text" id="Parcial1" name="Parcial1" required>
+
+            <label for="Parcial2">Parcial 2:</label>
+            <input type="Text" id="Parcial2" name="Parcial2" required>
+
+            <label for="Final">Calificacion Final:</label>
+            <input type="Text" id="Final" name="Final" required>
+
+            <button type="submit">Registrar Alumno</button>
+        </form>
+    </div>
+    <script>
+        var form = document.getElementById('Form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("Form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            window.location.href = './RegistroDeAlumno.html';
+          });
+        });
+      </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+
+  /* Contenedor de la tabla */
+  .table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estilo de la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  /* Estilo de las celdas */
+  th, td {
+    padding: 12px 15px;
+  }
+
+  /* Encabezado */
+  th {
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+  }
+
+  /* Filas alternas */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  /* Bordes sutiles */
+  td, th {
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Al pasar el cursor por encima de una fila */
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Estilo para la tabla vacía */
+  .empty {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+  }
+  
+.menu a{
+    color: #ff0000;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order:1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #732088;
+}
+
+#check{
+    display: none;
+}
+@media(max-width: 768px){
+    /* HEADER */
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked  ~ .menu{
+        right: 0;
+    }
+    #inicio{
+        display: flex;
+    }
+
+    /* ICONOS */
+    .contenido-usos{
+        flex-direction: column;
+    }
+    .contenido-usos div{
+        border: none;
+    }
+    .inicio-texto{
+        flex-direction: column;
+    }
+
+    .inicio-texto h3{
+        font-size: 15px;
+        font-weight: 300;
+        padding: 10px 0px;
+    }
+    .inicio-texto h3 span{
+        font-weight: 600;
+    }
+    /* NOTICIAS */
+    #noticias{
+        flex-direction: column;
+    }
+}

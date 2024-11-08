@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">LISTA DE EVALUACION 2024C</h2>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+        </label>
+        <nav class="menu">
+            <a href="Añadiralumnonuevo.html">Añadir Nuevo Alumno</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+    <div class="inventory-container">
+        <table>
+            
+            <thead>
+                <tr>
+                    <th>Matricula</th>
+                    <th>Estudiantes</th>
+                    <th>Parcial 1</th>
+                    <th>Parcial 2</th>
+                    <th>Calificacion Final</th>
+                    
+                </tr>
+            </thead>
+            <tbody data-sheetdb-url="https://sheetdb.io/api/v1/6wjarqdjyw9j6"
+            data-sheetdb-sort-by="Estudiantes"
+            data-sheetdb-sort-order="asc"
+            >
+                <tr>
+                    <td>{{Matricula}}</td>
+                    <td>{{Estudiantes}}</td>
+                    <td>{{Parcial1}}</td>
+                    <td>{{Parcial2}}</td>
+                    <td>{{Final}}</td>
+                </tr>
+            </tbody>
+        </table>
+    <script src="https://sheetdb.io/handlebars.js"></script>
+   
+</body>
+</html>
